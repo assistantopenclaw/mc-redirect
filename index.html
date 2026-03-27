@@ -5,21 +5,17 @@
   <title>Mission Control — Loading...</title>
   <meta http-equiv="refresh" content="0;url=https://toys-cached-conjunction-palm.trycloudflare.com">
   <style>
-    body { background: #111; color: #fbbf24; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; flex-direction: column; }
-    .spinner { font-size: 3rem; animation: spin 1s linear infinite; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    p { color: #9ca3af; margin-top: 1rem; }
+    body { background: #111; color: #fbbf24; font-family: system-ui, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; flex-direction: column; text-align: center; }
+    .spinner { font-size: 4rem; animation: bounce 1s ease-in-out infinite; }
+    @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    p { color: #9ca3af; margin-top: 1.5rem; font-size: 1.1rem; }
+    small { color: #4b5563; margin-top: 0.5rem; }
   </style>
 </head>
 <body>
   <div class="spinner">🖥️</div>
-  <p>Loading Mission Control...</p>
-  <script>
-    // Read current tunnel URL from the config file and redirect
-    fetch('/tunnel-url.txt')
-      .then(r => r.text())
-      .then(url => { if (url) window.location.replace(url.trim()); })
-      .catch(() => {});
-  </script>
+  <p>Redirecting to Mission Control...</p>
+  <small>mc.kingdomrelationshipcoaching.com</small>
+  <script>window.location.replace("https://toys-cached-conjunction-palm.trycloudflare.com");</script>
 </body>
 </html>
