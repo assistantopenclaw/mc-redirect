@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mission Control — Loading...</title>
+  <meta http-equiv="refresh" content="0;url=https://toys-cached-conjunction-palm.trycloudflare.com">
+  <style>
+    body { background: #111; color: #fbbf24; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; flex-direction: column; }
+    .spinner { font-size: 3rem; animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    p { color: #9ca3af; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="spinner">🖥️</div>
+  <p>Loading Mission Control...</p>
+  <script>
+    // Read current tunnel URL from the config file and redirect
+    fetch('/tunnel-url.txt')
+      .then(r => r.text())
+      .then(url => { if (url) window.location.replace(url.trim()); })
+      .catch(() => {});
+  </script>
+</body>
+</html>
